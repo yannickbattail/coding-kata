@@ -1,5 +1,6 @@
 # coding-kata
-Coding katas
+
+Coding katas for coding dojos
 
 ## kata list
 
