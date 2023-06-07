@@ -1,8 +1,8 @@
 namespace kata;
 
-public class BasicItem : IItem
+public class PercentItem : IItem
 {
-    public BasicItem(string name)
+    public PercentItem(string name)
     {
         Name = name;
     }
@@ -13,7 +13,7 @@ public class BasicItem : IItem
 
     public void ApplyCharacteristic(ICharacter character, IReadOnlyCharacter originalCharacter)
     {
-        character.Attack += Attack;
-        character.Defence += Defence;
+        character.Attack += (int)Math.Round(Attack / 100d * originalCharacter.Attack);
+        character.Defence += (int)Math.Round(Defence / 100d * originalCharacter.Defence);
     }
 }

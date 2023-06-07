@@ -1,6 +1,6 @@
 namespace kata;
 
-public class Character : ICloneable
+public class Character : ICloneable, ICharacter, IReadOnlyCharacter
 {
     public Character(string name, int attack, int defence)
     {
@@ -20,11 +20,14 @@ public class Character : ICloneable
     }
 
 
-    public void ApplyEquipment()
+    public ICharacter ApplyEquipment(IReadOnlyCharacter originalCharacter)
     {
+        var clonedCharacter = (ICharacter) Clone();
         foreach (var item in Equipment)
         {
-            item.ApplyCharacteristic(this);
+            item.ApplyCharacteristic(clonedCharacter, originalCharacter);
         }
+
+        return clonedCharacter;
     }
 }

@@ -18,12 +18,20 @@ public static class Rpg
 
     private static void Print(IItem item)
     {
-        if (item is BasicItem basicItem)
+        switch (item)
         {
-            Console.WriteLine("BasicItem: " + basicItem.Name);
-            PrintCharacteristicWithName("Attack", basicItem.Attack);
-            PrintCharacteristicWithName("Defence", basicItem.Defence);
-            Console.WriteLine();
+            case BasicItem basicItem:
+                Console.WriteLine("BasicItem: " + basicItem.Name);
+                PrintCharacteristicWithName("Attack", basicItem.Attack);
+                PrintCharacteristicWithName("Defence", basicItem.Defence);
+                Console.WriteLine();
+                break;
+            case PercentItem percentItem:
+                Console.WriteLine("BasicItem: " + percentItem.Name);
+                PrintCharacteristicPercentWithName("Attack", percentItem.Attack);
+                PrintCharacteristicPercentWithName("Defence", percentItem.Defence);
+                Console.WriteLine();
+                break;
         }
     }
 
