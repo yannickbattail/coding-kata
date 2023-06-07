@@ -23,7 +23,7 @@ certain équipements peuvent ajouter un pourcentage d'une caractéristique sur l
 ex:
 - un personnage avec 10 points en attaque et 10 points en défense avec une cape +20% en défense aura 12 points en défense
 - un personnage avec 10 points en attaque et 10 points en défense avec une cape +20% en défense et un casque +50% en défense aura 17 points en défense
-- un personnage avec 18 points en attaque avec une dague +40% en attaque aura 17 points en attaque (arrondi)
+- un personnage avec 18 points en attaque avec une dague +40% en attaque aura 25 points en attaque (arrondi)
 
 ## Usure de l'équipement
 
